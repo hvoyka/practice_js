@@ -1,0 +1,14 @@
+.gallery{
+  width: 500px;
+  background: #f3f3f3;
+}
+.slider__image{
+  opacity: 0;
+  transition:  1s all;
+  width: 500px;
+  position: absolute;
+  top: 50px;
+}
+.slider__image-active {
+  opacity: 1;
+}
