@@ -1,27 +1,33 @@
-window.onload = function(){
-  var newPopup = new Popup();
-  newPopup.open("<h1>GREAT STORIES</h1>");
-    document.querySelector(".popup-bg").onclick = function(){
-      newPopup.close();
-    }
-  
-};
+
 function Popup(){
-    var popup = document.querySelector(".popup");
-    var popupBg = document.querySelector(".popup-bg");
+    this.modal = document.querySelector(".modal");
+    this.overlay = document.querySelector(".overlay");
+    var popup = this;
 
   this.open = function(content){
-    popup.style.display = "flex";
-    this.content = content;
-    popup.innerHTML = this.content;
+    popup.content = content;
+
+    popup.modal.style.display = "flex";
+    popup.overlay.style.display = "block";
+    
+    popup.modal.innerHTML = popup.content;
 
   };
   this.close = function(){
-    popup.style.display = "none";
-    popupBg.style.display = "none";
-    
+    popup.modal.style.display = "none";
+    popup.overlay.style.display = "none";
   };
-  /* popupBg.onclick = function(){
-    this.close();
-  } */
+  this.overlay.onclick = popup.close;
 }
+
+window.onload = function(){
+  var newPopup = new Popup();
+  
+  document.querySelector(".write").onclick = function(){
+    newPopup.open("<h1>GREAT STORIES</h1>");
+  };
+  document.querySelector(".call").onclick = function(){
+    newPopup.open("<h1>BAD STORIES</h1>");
+  };
+
+};

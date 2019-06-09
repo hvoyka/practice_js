@@ -6,7 +6,7 @@
 body{
   height:  1500px;
 }
-.popup{
+.modal{
   display: none;
   box-sizing: border-box;
   padding: 10px;
@@ -21,8 +21,9 @@ body{
   background-color: aquamarine;
   z-index: 6;
 }
-.popup-bg{
+.overlay{
   position: absolute;
+  display: none;
   top: 0;
   bottom: 0;
   right: 0;
