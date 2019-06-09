@@ -27,7 +27,8 @@ window.onload = function(){
     newPopup.open("<h1>GREAT STORIES</h1>");
   };
   document.querySelector(".call").onclick = function(){
-    newPopup.open("<h1>BAD STORIES</h1>");
+    var formCall = document.querySelector(".modal-callme");
+    newPopup.open(formCall.innerHTML);
   };
 
 };
