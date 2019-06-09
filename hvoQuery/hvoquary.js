@@ -35,5 +35,16 @@ function HvoQuery (elements){
         this.elements[i].innerHTML = html;
     }
     return this;
-}
+  }
+  this.fade = function (timer){
+    var op = 1;
+    var es = this.elements;
+
+    setInterval(function(){      
+      for(var i = 0; i < es.length; i++){
+        es[i].style.opacity = op;
+      }
+      op = op - 0.05;
+    }, (timer));
+  }
 }
