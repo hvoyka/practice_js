@@ -11,5 +11,8 @@ window.onload = function(){
   images.removeClass("hehe");
 
   $(".text").html("heyyaaa");
-  images.fade(50);
+
+  images.on("click", function(e){
+    $(this).fade();
+  })
   };

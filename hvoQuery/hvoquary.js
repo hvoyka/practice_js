@@ -1,5 +1,11 @@
 function $(selector){
-  var elements = document.querySelectorAll(selector);
+  var elements;
+  if(selector instanceof HTMLElement){
+    elements = [selector];
+  } else {
+    elements = document.querySelectorAll(selector);
+  }
+   
   return new HvoQuery(elements);
 }
 
@@ -36,7 +42,7 @@ function HvoQuery (elements){
     }
     return this;
   }
-  this.fade = function (timer){
+  this.fade = function (timer = 100){
     var op = 1;
     var es = this.elements;
 
