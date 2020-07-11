@@ -1,0 +1,47 @@
+body{
+  margin: 0;
+}
+*{
+  box-sizing: border-box;
+}
+.img  {
+  max-width: 100%;
+}
+.scene {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  min-height: 100vh;
+  z-index: -1;
+}
+.layer{
+  position: absolute;
+  left: -10%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 110%;
+  height: 100%;
+}
+.layer5{
+  background: url('img/layer_05_1920x1080.png') center no-repeat;
+  background-size: cover;
+}
+.layer4{
+  background: url('img/layer_04_1920x1080.png') center no-repeat;
+  background-size: cover;
+}
+.layer3{
+  background: url('img/layer_03_1920x1080.png') center no-repeat;
+  background-size: cover;
+}
+.layer2{
+  background: url('img/layer_02_1920x1080.png') center no-repeat;
+  background-size: cover;
+}
+.layer1{
+  background: url('img/layer_01_1920x1080.png') center no-repeat;
+  background-size: cover;
+}
