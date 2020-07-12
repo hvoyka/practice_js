@@ -1,0 +1,15 @@
+.valid{
+  border: 1px solid green;
+}
+.invalid {
+  border: 1px solid red;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 0 auto;
+}
+input{
+  margin-bottom: 15px;
+}
