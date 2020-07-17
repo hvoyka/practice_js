@@ -1,10 +1,13 @@
 (() => {
   const cnv = document.querySelector('canvas');
   const ctx = cnv.getContext('2d');
-
+  let centerX = 0;
+  let centerY = 0;
   function init() {
     cnv.width = innerWidth;
     cnv.height = innerHeight;
+    centerX = cnv.width / 2;
+    centerY = cnv.height / 2;
   }
   init();
 
@@ -24,8 +27,7 @@
     }
     startAngle >= 360 ? startAngle = 0 : startAngle++;
   }
-  let centerX = cnv.width / 2;
-  let centerY = cnv.height / 2;
+
 
   const maxWaveAmplitude  = 17;
   const namberOfWaves     = 7;
