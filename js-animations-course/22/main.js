@@ -14,8 +14,9 @@ function canvasAnimation() {
 }
 
 function drawCircle(x, y, s) {
-  clearCanvas();
-  context.fillStyle = "crimson"
+  //clearCanvas();
+  context.globalCompositeOperation = "screen"; //difference
+  context.fillStyle = "crimson";
   context.beginPath();
   context.arc(x, y, s, 0, 2 * Math.PI);
   context.fill();
