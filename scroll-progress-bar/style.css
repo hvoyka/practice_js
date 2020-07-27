@@ -1,0 +1,14 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-size: 20px;
+}
+.progress{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 4px;
+  background-color: tomato;
+}
