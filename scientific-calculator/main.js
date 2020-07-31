@@ -229,8 +229,17 @@ input_element.addEventListener('click', event => {
   });
 }); */
 
-function factorial(n) {
-  return n ? n * factorial(n - 1) : 1;
+function factorial(num) {
+  if( num % 1 !== 0) return gamma(num + 1);
+  if( num === 0 || num === 1) return 1;
+
+  let result = 1;
+
+  for(let i = 1; i <= num; i++){
+    result = result * i;
+    if(result === Infinity) return Infinity;
+  }
+  return result;
 }
 // GAMMA FUNCTINON
 function gamma(n) {  // accurate to about 15 decimal places
